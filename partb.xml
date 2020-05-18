@@ -1,0 +1,80 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
+<suite name="NewSuiteCases" verbose="1">
+
+<!--    Reach out to me : Aneesh - 8019635118 or at aneesh.hm425@gmail.com -->
+<!--    To run this script:-->
+<!--    1. Install maven and set the path.-->
+<!--    2. navigate to the project directory in terminal - com.principal-->
+<!--    3. execute script by using "mvn clean test"-->
+
+<!--change value to false to run script without submitting the form, true, if you want to submit-->
+    <parameter name="submit" value="false" />
+
+<!--    date format mmddyyyy ex: 01011990 -->
+    <parameter name="dob" value="01011990" />
+
+<!--    total amount being requested value-->
+    <parameter name="totalAmount" value="500000" />
+
+<!--    Is NewYork, Values include only true or false-->
+    <parameter name="isNewYork" value="false" />
+
+<!--    Contract signed state value if payor is not from NY, leave empty value if NY is selected previously-->
+    <parameter name="signedState" value="CA" />
+
+<!--    Keep true if you want to proceed with Accelerated Underwriting, false for traditional-->
+    <parameter name="accelerated" value="false" />
+
+<!--  (APPS-Portamedic, ExamOne, None)  Keep paramed vender preference value below, keep none if "I dont need.." check box to select-->
+    <parameter name="paramed" value="ExamOne" />
+
+    <!--    First Name of proposed Insured-->
+    <parameter name="firstName" value="David" />
+
+<!--    Last name of proposed Insured-->
+    <parameter name="lastName" value="Emmanuel" />
+
+<!--    Gender value to select. Values include only Male of Female -->
+    <parameter name="gender" value="Male" />
+
+<!--    Email ID value-->
+    <parameter name="emailId" value="hello@603550.net" />
+
+<!--    Phone Number-->
+    <parameter name="phoneNumber" value="3303553145" />
+
+<!--    Address-->
+    <parameter name="address" value="123 Bogg Street" />
+
+<!--    city-->
+    <parameter name="city" value="Beverly Hills" />
+
+<!--    State values should match in the dropdown of UI ex: CA-->
+    <parameter name="state" value="CA" />
+
+<!--    Zip Code-->
+    <parameter name="zip" value="90210" />
+
+<!--    Field office Name -->
+    <parameter name="fieldOfficeName" value="David Emmanuel" />
+
+<!--    Field office Email-->
+    <parameter name="fieldOfficeEmail" value="hello@603550.net" />
+
+<!--    Field office phone Number-->
+    <parameter name="fieldOfficePhone" value="3303553145" />
+
+<!--    Enter value for the required Part B method of completion : Phone or Online-->
+    <parameter name="completionMethod" value="phone" />
+
+
+<!--    DO NOT change below code.-->
+    <test name="RetrySuites">
+        <classes>
+            <class name="ScriptPackage.InitScript" />
+        </classes>
+    </test>
+
+</suite>

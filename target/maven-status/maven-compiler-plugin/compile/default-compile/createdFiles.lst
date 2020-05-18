@@ -1,0 +1,7 @@
+ScriptPackage\InitScript.class
+com\Main.class
+PageObjects\Page1.class
+PageObjects\FieldOfficeContactP4.class
+PageObjects\AboutTheInsuredP3.class
+PageObjects\AboutTheAppP2.class
+PageObjects\PartBp4.class
