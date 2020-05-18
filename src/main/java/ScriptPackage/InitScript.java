@@ -33,11 +33,11 @@ public class InitScript {
     }
 
     @Test
-    @Parameters({"dob", "totalAmount", "isNewYork", "signedState",
+    @Parameters({"dob", "totalAmount", "signedState",
     "firstName", "lastName", "gender", "emailId", "phoneNumber", "address", "city", "state", "zip",
     "fieldOfficeName", "fieldOfficeEmail", "fieldOfficePhone", "submit", "accelerated", "paramed",
             "completionMethod"})
-    public  void metho1(String dob, String totalAmount, String isNewYork, String contractSignedState,
+    public  void metho1(String dob, String totalAmount, String contractSignedState,
                         String firstName, String lastName, String gender, String emailId, String phoneNumber,
                         String address, String city, String state, String zip, String fieldOfficeName,
                         String fieldOfficeEmail, String fieldOfficePhone, String submit,
@@ -59,7 +59,7 @@ public class InitScript {
             //AboutTheApp - page 2
             p2.setTotalAmount(totalAmount);
             System.out.println("Entered Amount: "+ totalAmount);
-            if(isNewYork.toLowerCase().equalsIgnoreCase("false")){
+            if(!contractSignedState.equalsIgnoreCase("ny")){
                 p2.isNewYork(false);
                 System.out.println(" No Selected for New York");
                 p2.contractSigned(contractSignedState);
