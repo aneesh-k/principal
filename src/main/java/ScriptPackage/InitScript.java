@@ -24,7 +24,7 @@ public class InitScript {
         //System.setProperty("webdriver.chrome.driver", "/home/ubuntu/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         //driver = new RemoteWebDriver(new URL("http://18.233.10.166:4444/wd/hub"), options);
         //driver = new RemoteWebDriver(new URL("http://52.90.7.52:4444/wd/hub"), options);
         driver.get("https://insurance.advisors.principal.com/");
